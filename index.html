@@ -24,7 +24,7 @@
       margin-bottom: 10px;
       color: #004c8c;
     }
-    .about, .gallery, .contact {
+    .about, .gallery, .contact, .cta {
       margin-top: 40px;
       text-align: center;
     }
@@ -33,6 +33,19 @@
       height: auto;
       border-radius: 10px;
       margin-bottom: 20px;
+    }
+    .cta-button {
+      background-color: #004c8c;
+      color: white;
+      font-weight: bold;
+      padding: 10px 20px;
+      border-radius: 5px;
+      text-decoration: none;
+      margin-top: 10px;
+      display: inline-block;
+    }
+    .cta-button:hover {
+      background-color: #0069cc;
     }
     .footer {
       background-color: #87CEEB;
@@ -60,14 +73,30 @@
     <p>At Pressure Wash FL, we specialize in pressure washing services, including mold, algae, and mildew removal. With over 20 years of experience, we provide the highest quality pressure washing for homes, decks, and more!</p>
   </section>
 
-  <!-- Image Gallery -->
+  <!-- Image Gallery Section -->
   <section class="gallery py-10">
     <h2 class="section-title">Our Work</h2>
     <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+      <!-- Image 1: Beach House -->
+      <img src="https://via.placeholder.com/800x500.png?text=Florida+Beach+Home" alt="Florida Beach House">
+      <!-- Image 2: Pressure Washing Deck -->
       <img src="https://via.placeholder.com/800x500.png?text=Pressure+Washing+Deck" alt="Pressure washing deck">
+      <!-- Image 3: Pressure Washing House -->
       <img src="https://via.placeholder.com/800x500.png?text=Pressure+Washing+House" alt="Pressure washing house">
-      <img src="https://via.placeholder.com/800x500.png?text=Mold+Removal" alt="Mold removal pressure washing">
     </div>
+  </section>
+
+  <!-- Call to Action Section -->
+  <section class="cta py-10">
+    <h2 class="section-title">Why Choose Us?</h2>
+    <ul class="list-disc text-lg text-left mx-auto max-w-xl mb-6">
+      <li>Over 20 years of experience in pressure washing</li>
+      <li>Safe and effective removal of mold, algae, and mildew</li>
+      <li>Professional-grade equipment for quality results</li>
+      <li>Affordable pricing with no hidden fees</li>
+      <li>Fast and efficient service with attention to detail</li>
+    </ul>
+    <a href="tel:8508605318" class="cta-button">Call Now for a Free Quote</a>
   </section>
 
   <!-- Contact Section -->
@@ -79,6 +108,7 @@
   <!-- Footer Section -->
   <footer class="footer">
     <p>&copy; 2025 Pressure Wash FL. All Rights Reserved.</p>
+    <a href="https://whatsgoodlocal.com" class="text-white">Visit Our Main Website</a>
   </footer>
 
 </body>
