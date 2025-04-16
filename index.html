@@ -7,109 +7,105 @@
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
   <style>
     body {
-      font-family: Arial, sans-serif;
-      background-color: #e6f7ff; /* Soft blue background */
-      color: #333;
+      background-color: #F0F8FF; /* Soft blue background */
+      font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
     }
     .header {
-      background-color: #87CEEB; /* Light Sky Blue */
+      background-color: #87CEFA; /* Light sky blue header */
       color: white;
       padding: 20px;
       text-align: center;
-      border-bottom: 4px solid #004c8c; /* Dark blue border */
+      border-bottom: 4px solid #004C8C; /* Dark blue border for contrast */
     }
     .section-title {
       font-size: 2rem;
       font-weight: bold;
-      margin-bottom: 10px;
-      color: #004c8c;
-    }
-    .about, .gallery, .contact, .cta {
-      margin-top: 40px;
-      text-align: center;
-    }
-    .gallery img {
-      max-width: 100%;
-      height: auto;
-      border-radius: 10px;
-      margin-bottom: 20px;
+      color: #004C8C;
+      margin-bottom: 1rem;
     }
     .cta-button {
-      background-color: #004c8c;
+      background-color: #004C8C;
       color: white;
+      padding: 12px 24px;
+      border-radius: 6px;
       font-weight: bold;
-      padding: 10px 20px;
-      border-radius: 5px;
       text-decoration: none;
-      margin-top: 10px;
-      display: inline-block;
+      transition: background-color 0.3s;
     }
     .cta-button:hover {
-      background-color: #0069cc;
+      background-color: #007ACC;
     }
     .footer {
-      background-color: #87CEEB;
+      background-color: #87CEFA;
       color: white;
-      padding: 10px;
       text-align: center;
-      margin-top: 40px;
+      padding: 16px;
+      margin-top: 2rem;
     }
   </style>
 </head>
-<body>
-
+<body class="antialiased">
   <!-- Header Section -->
   <header class="header">
-    <h1 class="text-4xl md:text-6xl font-bold mb-4">Pressure Wash FL</h1>
-    <p class="text-lg md:text-xl mb-8">Pressure washing pros, highly experienced, mold/algae/mildew removal with over 20 years experience</p>
-    <a href="tel:8508605318" class="bg-yellow-400 text-black font-bold py-3 px-6 rounded-xl shadow-lg hover:bg-yellow-300 transition duration-300 inline-block">
-      Call Now: 850-860-5318
-    </a>
+    <h1 class="text-5xl md:text-6xl font-bold mb-4">Pressure Wash FL</h1>
+    <p class="text-lg md:text-xl">Pressure washing pros, highly experienced, mold/algae/mildew removal, with over 20 years of expertise</p>
+    <a href="tel:8508605318" class="mt-4 inline-block cta-button">Call Now: 850-860-5318</a>
   </header>
 
-  <!-- About Section -->
-  <section class="about py-10">
-    <h2 class="section-title">About Us</h2>
-    <p>At Pressure Wash FL, we specialize in pressure washing services, including mold, algae, and mildew removal. With over 20 years of experience, we provide the highest quality pressure washing for homes, decks, and more!</p>
-  </section>
+  <main class="max-w-6xl mx-auto px-4 py-10">
+    <!-- About Section -->
+    <section class="mb-16 text-center">
+      <h2 class="section-title">About Us</h2>
+      <p class="text-xl">
+        At Pressure Wash FL, we deliver professional pressure washing services for Florida’s homes, decks, and commercial properties. Our dedicated team removes mold, algae, and mildew using state‐of‐the‐art equipment, all backed by over 20 years of industry experience.
+      </p>
+    </section>
 
-  <!-- Image Gallery Section -->
-  <section class="gallery py-10">
-    <h2 class="section-title">Our Work</h2>
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-      <!-- Image 1: Beach House -->
-      <img src="https://images.unsplash.com/photo-1560220607-b53a56f72660?crop=entropy&cs=tinysrgb&fit=max&ixid=MnwzNjUyOXwwfDF8c2VhcmNofDJ8fGJlYWNoaG91c2V8ZW58MHx8fHwxNjc4fDEyMDA&ixlib=rb-1.2.1&q=80&w=1080" alt="Florida Beach House">
-      <!-- Image 2: Pressure Washing Deck -->
-      <img src="https://images.unsplash.com/photo-1601929717405-d2eae38713b3?crop=entropy&cs=tinysrgb&fit=max&ixid=MnwzNjUyOXwwfDF8c2VhcmNofDh8fHBzZXN0cmUlMjB3YXNoaW5nfGVufDB8fHx8fDE2NzgyNzA5NzM&ixlib=rb-1.2.1&q=80&w=1080" alt="Pressure washing deck">
-      <!-- Image 3: Pressure Washing House -->
-      <img src="https://images.unsplash.com/photo-1584431292113-d9cb8b1e1d72?crop=entropy&cs=tinysrgb&fit=max&ixid=MnwzNjUyOXwwfDF8c2VhcmNofDk1fHxyZXBhaXJpbmdhIGhvdXNlfGVufDB8fHx8fDE2NzgyNzA5NzM&ixlib=rb-1.2.1&q=80&w=1080" alt="Pressure washing house">
-    </div>
-  </section>
+    <!-- Image Gallery Section -->
+    <section class="mb-16">
+      <h2 class="section-title text-center">Our Work</h2>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <!-- Florida Beach Home -->
+        <div>
+          <img src="https://source.unsplash.com/800x500/?florida,beach,home" alt="Florida Beach Home" class="w-full h-auto rounded shadow-lg">
+        </div>
+        <!-- Pressure Washing Deck -->
+        <div>
+          <img src="https://source.unsplash.com/800x500/?pressurewashing,deck" alt="Pressure Washing Deck" class="w-full h-auto rounded shadow-lg">
+        </div>
+        <!-- Pressure Washing House -->
+        <div>
+          <img src="https://source.unsplash.com/800x500/?pressurewashing,house" alt="Pressure Washing House" class="w-full h-auto rounded shadow-lg">
+        </div>
+      </div>
+    </section>
 
-  <!-- Call to Action Section -->
-  <section class="cta py-10">
-    <h2 class="section-title">Why Choose Us?</h2>
-    <ul class="list-disc text-lg text-left mx-auto max-w-xl mb-6">
-      <li>Over 20 years of experience in pressure washing</li>
-      <li>Safe and effective removal of mold, algae, and mildew</li>
-      <li>Professional-grade equipment for quality results</li>
-      <li>Affordable pricing with no hidden fees</li>
-      <li>Fast and efficient service with attention to detail</li>
-    </ul>
-    <a href="tel:8508605318" class="cta-button">Call Now for a Free Quote</a>
-  </section>
+    <!-- Call To Action Section -->
+    <section class="mb-16 text-center">
+      <h2 class="section-title">Why Choose Us?</h2>
+      <ul class="list-disc text-left mx-auto max-w-xl text-lg mb-8">
+        <li>Over 20 years of hands-on experience</li>
+        <li>Effective removal of mold, algae, and mildew</li>
+        <li>Professional-grade equipment for spotless results</li>
+        <li>Competitive, transparent pricing</li>
+        <li>Fast, reliable, and friendly service</li>
+      </ul>
+      <a href="tel:8508605318" class="cta-button">Call Now for a Free Quote</a>
+    </section>
 
-  <!-- Contact Section -->
-  <section class="contact py-10">
-    <h2 class="section-title">Contact Us</h2>
-    <p>If you're ready to get your home or business looking its best, give us a call today! We are available at <strong>850-860-5318</strong>.</p>
-  </section>
+    <!-- Contact Section -->
+    <section class="mb-16 text-center">
+      <h2 class="section-title">Contact Us</h2>
+      <p class="text-xl">
+        Ready to revitalize your property? Contact us today at <strong>850-860-5318</strong> for premium pressure washing services.
+      </p>
+    </section>
+  </main>
 
   <!-- Footer Section -->
   <footer class="footer">
     <p>&copy; 2025 Pressure Wash FL. All Rights Reserved.</p>
     <a href="https://whatsgoodlocal.com" class="text-white">Visit Our Main Website</a>
   </footer>
-
 </body>
 </html>
