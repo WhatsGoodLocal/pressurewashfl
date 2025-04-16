@@ -2,19 +2,22 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Pressure Wash FL - Professional Pressure Washing Services</title>
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
   <style>
+    /* Base Styles */
     body {
       background-color: #F0F8FF; /* Soft blue background */
       font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+      margin: 0;
+      padding: 0;
     }
     .header {
       background-color: #87CEFA; /* Light sky blue header */
       color: white;
-      padding: 20px;
       text-align: center;
+      padding: 2rem;
       border-bottom: 4px solid #004C8C; /* Dark blue border for contrast */
     }
     .section-title {
@@ -22,6 +25,7 @@
       font-weight: bold;
       color: #004C8C;
       margin-bottom: 1rem;
+      text-align: center;
     }
     .cta-button {
       background-color: #004C8C;
@@ -31,6 +35,8 @@
       font-weight: bold;
       text-decoration: none;
       transition: background-color 0.3s;
+      display: inline-block;
+      margin-top: 1rem;
     }
     .cta-button:hover {
       background-color: #007ACC;
@@ -42,70 +48,44 @@
       padding: 16px;
       margin-top: 2rem;
     }
+    /* Responsive Layout Helpers */
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 1rem;
+    }
+    .img-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1rem;
+    }
+    @media(min-width:768px) {
+      .img-grid {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
   </style>
 </head>
-<body class="antialiased">
+<body>
+
   <!-- Header Section -->
   <header class="header">
-    <h1 class="text-5xl md:text-6xl font-bold mb-4">Pressure Wash FL</h1>
-    <p class="text-lg md:text-xl">Pressure washing pros, highly experienced, mold/algae/mildew removal, with over 20 years of expertise</p>
-    <a href="tel:8508605318" class="mt-4 inline-block cta-button">Call Now: 850-860-5318</a>
+    <h1 class="text-4xl md:text-6xl font-bold mb-4">Pressure Wash FL</h1>
+    <p class="text-lg md:text-xl">
+      Pressure washing pros, highly experienced, mold/algae/mildew removal, with over 20 years of expertise
+    </p>
+    <a href="tel:8508605318" class="bg-yellow-400 text-black font-bold py-3 px-6 rounded-xl shadow-lg hover:bg-yellow-300 transition duration-300 inline-block mt-4">
+      Call Now: 850-860-5318
+    </a>
   </header>
 
-  <main class="max-w-6xl mx-auto px-4 py-10">
+  <!-- Main Content -->
+  <main class="container">
+
     <!-- About Section -->
-    <section class="mb-16 text-center">
+    <section class="py-10 text-center">
       <h2 class="section-title">About Us</h2>
-      <p class="text-xl">
-        At Pressure Wash FL, we deliver professional pressure washing services for Florida’s homes, decks, and commercial properties. Our dedicated team removes mold, algae, and mildew using state‐of‐the‐art equipment, all backed by over 20 years of industry experience.
-      </p>
-    </section>
-
-    <!-- Image Gallery Section -->
-    <section class="mb-16">
-      <h2 class="section-title text-center">Our Work</h2>
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-        <!-- Florida Beach Home -->
-        <div>
-          <img src="https://source.unsplash.com/800x500/?florida,beach,home" alt="Florida Beach Home" class="w-full h-auto rounded shadow-lg">
-        </div>
-        <!-- Pressure Washing Deck -->
-        <div>
-          <img src="https://source.unsplash.com/800x500/?pressurewashing,deck" alt="Pressure Washing Deck" class="w-full h-auto rounded shadow-lg">
-        </div>
-        <!-- Pressure Washing House -->
-        <div>
-          <img src="https://source.unsplash.com/800x500/?pressurewashing,house" alt="Pressure Washing House" class="w-full h-auto rounded shadow-lg">
-        </div>
-      </div>
-    </section>
-
-    <!-- Call To Action Section -->
-    <section class="mb-16 text-center">
-      <h2 class="section-title">Why Choose Us?</h2>
-      <ul class="list-disc text-left mx-auto max-w-xl text-lg mb-8">
-        <li>Over 20 years of hands-on experience</li>
-        <li>Effective removal of mold, algae, and mildew</li>
-        <li>Professional-grade equipment for spotless results</li>
-        <li>Competitive, transparent pricing</li>
-        <li>Fast, reliable, and friendly service</li>
-      </ul>
-      <a href="tel:8508605318" class="cta-button">Call Now for a Free Quote</a>
-    </section>
-
-    <!-- Contact Section -->
-    <section class="mb-16 text-center">
-      <h2 class="section-title">Contact Us</h2>
-      <p class="text-xl">
-        Ready to revitalize your property? Contact us today at <strong>850-860-5318</strong> for premium pressure washing services.
-      </p>
-    </section>
-  </main>
-
-  <!-- Footer Section -->
-  <footer class="footer">
-    <p>&copy; 2025 Pressure Wash FL. All Rights Reserved.</p>
-    <a href="https://whatsgoodlocal.com" class="text-white">Visit Our Main Website</a>
-  </footer>
-</body>
-</html>
+      <p class="text-xl max-w-3xl mx-auto">
+        At Pressure Wash FL, we specialize in professional pressure washing for Florida homes, decks, and businesses. 
+        From mold, algae, and mildew removal to deep cleaning of outdoor surfaces, our expert team ensures every job 
+        shines. With <strong
