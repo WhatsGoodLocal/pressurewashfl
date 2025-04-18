@@ -3,55 +3,46 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Pressure Wash FL – Professional Pressure Washing Services</title>
+  <title>Pressure Wash FL – Professional Pressure Washing</title>
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
   <style>
-    body {
-      background-color: #F0F8FF;
-      font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-      margin: 0; padding: 0;
-    }
-    header.hero {
+    body { margin:0; font-family: sans-serif; background: #F0F8FF; }
+    .hero {
       position: relative;
       height: 60vh;
       background: url('images/hero.jpg') center/cover no-repeat;
     }
-    header.hero::before {
-      content: "";
-      position: absolute; inset: 0;
+    .hero::before {
+      content:""; position:absolute; inset:0;
       background: rgba(0,0,0,0.4);
     }
-    header.hero .hero-content {
-      position: relative; z-index: 10;
-      height: 100%;
-      display: flex; flex-direction: column;
-      justify-content: center; align-items: center;
-      color: white; text-align: center;
-      padding: 0 1rem;
+    .hero-content {
+      position: relative; z-index:1;
+      display:flex;flex-direction:column;
+      justify-content:center;align-items:center;
+      height:100%;color:#FFF;text-align:center;
+      padding:0 1rem;
     }
-    header.hero h1 { font-size: 2.5rem; }
-    header.hero p { margin-top: .5rem; font-size: 1.125rem; }
-    .container { max-width: 1200px; margin: 0 auto; padding: 2rem 1rem; }
-    .section-title {
-      font-size: 2rem; font-weight: bold;
-      color: #004C8C; margin-bottom: 1rem;
-      text-align: center;
+    .hero h1 { font-size:3rem; margin-bottom:0.5rem; }
+    .hero p.call { 
+      background:#FFD200; color:#003366;
+      padding:0.75rem 1.5rem; border-radius:9999px;
+      font-weight:bold;
     }
+    .section { max-width: 800px; margin: 4rem auto; padding: 0 1rem; text-align:center; }
+    .section h2 { font-size:2rem; color:#004C8C; margin-bottom:1rem; }
     .img-grid {
-      display: grid; grid-template-columns: 1fr;
-      gap: 1rem;
+      display:grid;grid-template-columns:1fr;
+      gap:1rem;
     }
-    @media(min-width:768px) {
-      .img-grid { grid-template-columns: repeat(3,1fr); }
+    @media(min-width:768px){
+      .img-grid { grid-template-columns:repeat(3,1fr); }
     }
     .img-grid img {
-      width: 100%; height: auto;
-      border-radius: 8px; box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+      width:100%;height:auto;
+      border-radius:8px;box-shadow:0 2px 6px rgba(0,0,0,0.15);
     }
-    .footer {
-      background-color: #87CEFA; color: white;
-      text-align: center; padding: 1rem;
-    }
+    footer { background:#87CEEB; color:#fff; text-align:center; padding:1rem; }
   </style>
 </head>
 <body>
@@ -59,180 +50,56 @@
   <!-- HERO -->
   <header class="hero">
     <div class="hero-content">
-      <h1 class="font-bold">Pressure Wash FL</h1>
-      <p>20+ years of Florida‑sunshine expertise in mold, algae & mildew removal</p>
-      <p class="mt-4 text-yellow-300 font-bold">Call Now: 850‑860‑5318</p>
+      <h1>Pressure Wash FL</h1>
+      <p>Over 20 years removing mold, algae & mildew across Florida</p>
+      <p class="call">Call Now × 850‑860‑5318</p>
     </div>
   </header>
 
-  <!-- MAIN CONTENT -->
-  <main>
+  <!-- ABOUT -->
+  <section class="section">
+    <h2>About Us</h2>
+    <p>
+      At Pressure Wash FL, we specialize in professional pressure washing for Florida homes, decks, 
+      and businesses. From algae & mildew removal to deep‑clean restores, our expert team guarantees
+      spotless results every time.
+    </p>
+  </section>
 
-    <!-- ABOUT -->
-    <section class="container text-center">
-      <h2 class="section-title">About Us</h2>
-      <p class="text-lg max-w-3xl mx-auto">
-        We revitalize Florida homes, decks & businesses by blasting away mold, algae & mildew with pro‑grade equipment.  
-        Satisfaction guaranteed every time!
-      </p>
-    </section>
-
-    <!-- BEFORE & AFTER GALLERY -->
-    <section class="container py-10">
-      <h2 class="section-title">Before & After</h2>
-      <div class="img-grid">
-        <img src="images/before.jpg" alt="Before pressure washing">
-        <img src="images/action.jpg" alt="Pressure washing in action">
-        <img src="images/after.jpg"  alt="After pressure washing">
-      </div>
-    </section>
-
-    <!-- WHY CHOOSE US -->
-    <section class="container text-center py-10">
-      <h2 class="section-title">Why Choose Us?</h2>
-      <ul class="list-disc mx-auto max-w-xl text-left text-lg space-y-2">
-        <li>20+ years of Florida experience</li>
-        <li>Eco‑friendly cleaning solutions</li>
-        <li>Industrial‑grade pressure‑washing</li>
-        <li>Transparent pricing, no surprises</li>
-        <li>Prompt, reliable, friendly service</li>
-      </ul>
-    </section>
-
-    <!-- CONTACT -->
-    <section class="container text-center py-10">
-      <h2 class="section-title">Contact Us</h2>
-      <p class="text-lg">
-        Ready for a transformation?  
-        Call <strong>850‑860‑5318</strong> or visit  
-        <a href="https://whatsgoodlocal.com" class="text-blue-600 underline">WhatsGoodLocal.com</a>
-      </p>
-    </section>
-
-  </main>
-
-  <!-- FOOTER -->
-  <footer class="footer">
-    &copy; 2025 Pressure Wash FL. All Rights Reserved.
-  </footer>
-
-</body>
-</html><!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Pressure Wash FL – Professional Pressure Washing Services</title>
-  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-  <style>
-    body {
-      background-color: #F0F8FF;
-      font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-      margin: 0; padding: 0;
-    }
-    header.hero {
-      position: relative;
-      height: 60vh;
-      background: url('images/hero.jpg') center/cover no-repeat;
-    }
-    header.hero::before {
-      content: "";
-      position: absolute; inset: 0;
-      background: rgba(0,0,0,0.4);
-    }
-    header.hero .hero-content {
-      position: relative; z-index: 10;
-      height: 100%;
-      display: flex; flex-direction: column;
-      justify-content: center; align-items: center;
-      color: white; text-align: center;
-      padding: 0 1rem;
-    }
-    header.hero h1 { font-size: 2.5rem; }
-    header.hero p { margin-top: .5rem; font-size: 1.125rem; }
-    .container { max-width: 1200px; margin: 0 auto; padding: 2rem 1rem; }
-    .section-title {
-      font-size: 2rem; font-weight: bold;
-      color: #004C8C; margin-bottom: 1rem;
-      text-align: center;
-    }
-    .img-grid {
-      display: grid; grid-template-columns: 1fr;
-      gap: 1rem;
-    }
-    @media(min-width:768px) {
-      .img-grid { grid-template-columns: repeat(3,1fr); }
-    }
-    .img-grid img {
-      width: 100%; height: auto;
-      border-radius: 8px; box-shadow: 0 2px 6px rgba(0,0,0,0.15);
-    }
-    .footer {
-      background-color: #87CEFA; color: white;
-      text-align: center; padding: 1rem;
-    }
-  </style>
-</head>
-<body>
-
-  <!-- HERO -->
-  <header class="hero">
-    <div class="hero-content">
-      <h1 class="font-bold">Pressure Wash FL</h1>
-      <p>20+ years of Florida‑sunshine expertise in mold, algae & mildew removal</p>
-      <p class="mt-4 text-yellow-300 font-bold">Call Now: 850‑860‑5318</p>
+  <!-- GALLERY -->
+  <section class="section">
+    <h2>Before & After</h2>
+    <div class="img-grid">
+      <img src="images/before.jpg" alt="Before pressure washing">
+      <img src="images/action.jpg" alt="Pressure washing in action">
+      <img src="images/after.jpg"  alt="After pressure washing">
     </div>
-  </header>
+  </section>
 
-  <!-- MAIN CONTENT -->
-  <main>
+  <!-- WHY CHOOSE US -->
+  <section class="section">
+    <h2>Why Choose Us?</h2>
+    <ul class="list-disc list-inside text-left max-w-xl mx-auto">
+      <li>20+ years of hands‑on Florida experience</li>
+      <li>Industrial‑grade equipment for lasting clean</li>
+      <li>Eco‑friendly solutions, no hidden fees</li>
+      <li>Fast, reliable & friendly service</li>
+    </ul>
+  </section>
 
-    <!-- ABOUT -->
-    <section class="container text-center">
-      <h2 class="section-title">About Us</h2>
-      <p class="text-lg max-w-3xl mx-auto">
-        We revitalize Florida homes, decks & businesses by blasting away mold, algae & mildew with pro‑grade equipment.  
-        Satisfaction guaranteed every time!
-      </p>
-    </section>
-
-    <!-- BEFORE & AFTER GALLERY -->
-    <section class="container py-10">
-      <h2 class="section-title">Before & After</h2>
-      <div class="img-grid">
-        <img src="images/before.jpg" alt="Before pressure washing">
-        <img src="images/action.jpg" alt="Pressure washing in action">
-        <img src="images/after.jpg"  alt="After pressure washing">
-      </div>
-    </section>
-
-    <!-- WHY CHOOSE US -->
-    <section class="container text-center py-10">
-      <h2 class="section-title">Why Choose Us?</h2>
-      <ul class="list-disc mx-auto max-w-xl text-left text-lg space-y-2">
-        <li>20+ years of Florida experience</li>
-        <li>Eco‑friendly cleaning solutions</li>
-        <li>Industrial‑grade pressure‑washing</li>
-        <li>Transparent pricing, no surprises</li>
-        <li>Prompt, reliable, friendly service</li>
-      </ul>
-    </section>
-
-    <!-- CONTACT -->
-    <section class="container text-center py-10">
-      <h2 class="section-title">Contact Us</h2>
-      <p class="text-lg">
-        Ready for a transformation?  
-        Call <strong>850‑860‑5318</strong> or visit  
-        <a href="https://whatsgoodlocal.com" class="text-blue-600 underline">WhatsGoodLocal.com</a>
-      </p>
-    </section>
-
-  </main>
+  <!-- CONTACT -->
+  <section class="section">
+    <h2>Contact Us</h2>
+    <p>
+      Ready to transform your property?  
+      <strong>Call 850‑860‑5318</strong> or visit  
+      <a href="https://whatsgoodlocal.com" class="text-blue-600 underline">WhatsGoodLocal.com</a>
+    </p>
+  </section>
 
   <!-- FOOTER -->
-  <footer class="footer">
-    &copy; 2025 Pressure Wash FL. All Rights Reserved.
+  <footer>
+    &copy; 2025 Pressure Wash FL | All Rights Reserved
   </footer>
 
 </body>
