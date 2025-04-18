@@ -3,15 +3,12 @@
 <head>
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Pressure Wash FL – Pro Pressure Washing & Painting</title>
+  <title>Pressure Wash FL – Pro Pressure Washing & Painting</title>
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet"/>
   <style>
-    body {
-      margin: 0;
-      font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-      background: #fff;
-      color: #004C8C;
-    }
+    /* Base Styles */
+    body { margin: 0; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; background: #fff; color: #004C8C; }
+
     /* HERO */
     header.hero {
       position: relative;
@@ -26,121 +23,87 @@
     }
     .hero-content {
       position: relative; z-index: 1;
-      height: 100%;
-      display: flex; flex-direction: column;
+      height: 100%; display: flex; flex-direction: column;
       justify-content: center; align-items: center;
-      text-align: center;
-      padding: 0 1rem;
+      text-align: center; padding: 0 1rem;
     }
     .hero-content h1 {
-      font-size: 4rem;
-      margin: 0;
-      color: #fff;
-      text-shadow: 2px 2px 8px rgba(0,0,0,0.5);
+      font-size: 4rem; margin: 0;
+      color: #fff; text-shadow: 2px 2px 8px rgba(0,0,0,0.5);
     }
     .hero-content p {
-      margin: .75rem 0;
-      font-size: 1.5rem;
-      color: #fff;
+      margin: .75rem 0; font-size: 1.5rem; color: #fff;
     }
     .hero-content .call {
       margin-top: 1.5rem;
-      background: #fff;
-      color: #004C8C;
-      padding: 1rem 2rem;
-      border-radius: 9999px;
-      font-size: 1.25rem;
-      font-weight: bold;
-      transform: scale(1);
+      background: #fff; color: #004C8C;
+      padding: 1rem 2rem; border-radius: 9999px;
+      font-size: 1.25rem; font-weight: bold;
       transition: transform .2s ease;
     }
-    .hero-content .call:hover {
-      transform: scale(1.1);
-    }
+    .hero-content .call:hover { transform: scale(1.1); }
 
     /* PROMO BADGE */
     .promo {
-      position: fixed;
-      top: 35%;
-      right: 1rem;
-      display: flex;
-      align-items: center;
-      z-index: 1000;
+      position: fixed; top: 35%; right: 1rem;
+      display: flex; align-items: center; z-index: 1000;
     }
     .promo-text {
-      background: #fff;
-      color: #004C8C;
-      padding: .75rem 1.25rem;
-      border-radius: .5rem;
-      font-size: 1.125rem;
-      font-weight: bold;
+      background: #fff; color: #004C8C;
+      padding: .75rem 1.25rem; border-radius: .5rem;
+      font-size: 1.125rem; font-weight: bold;
       box-shadow: 0 2px 6px rgba(0,0,0,0.2);
     }
     .star-badge {
-      width: 160px;
-      height: 160px;
-      margin-left: .5rem;
-      background: gold;
-      border: 5px solid #004C8C;
+      width: 180px; height: 180px; margin-left: .5rem;
+      background: gold; border: 5px solid #004C8C;
       clip-path: polygon(
         50% 0%, 61% 35%, 98% 35%, 68% 57%,
         79% 91%, 50% 70%, 21% 91%, 32% 57%,
         2% 35%, 39% 35%
       );
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 2rem;
-      font-weight: bold;
-      color: #004C8C;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 1.75rem; font-weight: bold; color: #004C8C;
       text-shadow: 1px 1px 2px rgba(255,255,255,0.8);
       box-shadow: 0 2px 6px rgba(0,0,0,0.2);
     }
 
     /* SECTIONS */
     .container {
-      max-width: 900px;
-      margin: 3rem auto;
-      padding: 0 1rem;
-      text-align: center;
+      max-width: 900px; margin: 3rem auto; padding: 0 1rem; text-align: center;
     }
     .section-title {
-      font-size: 3rem;
-      color: #004C8C;
-      font-weight: 900;
-      text-transform: uppercase;
-      letter-spacing: 1px;
-      margin-bottom: 1.5rem;
+      font-size: 3rem; color: #004C8C; font-weight: 900;
+      text-transform: uppercase; letter-spacing: 1px; margin-bottom: 1.5rem;
     }
 
     /* IMAGE GRID */
     .img-grid {
-      display: grid;
-      grid-template-columns: 1fr;
-      gap: 1.5rem;
+      display: grid; grid-template-columns: 1fr; gap: 1.5rem;
     }
-    @media(min-width:768px) {
-      .img-grid { grid-template-columns: repeat(3,1fr); }
-    }
+    @media(min-width:768px) { .img-grid { grid-template-columns: repeat(3,1fr); } }
     .img-grid img {
-      width: 100%;
-      height: 16rem;
-      object-fit: cover;
-      border-radius: .75rem;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+      width: 100%; height: 16rem; object-fit: cover;
+      border-radius: .75rem; box-shadow: 0 4px 12px rgba(0,0,0,0.15);
       transition: transform .3s ease;
     }
-    .img-grid img:hover {
-      transform: scale(1.05);
+    .img-grid img:hover { transform: scale(1.05); }
+
+    /* MOBILE ADJUSTMENTS */
+    @media(max-width:640px) {
+      header.hero { height: 50vh; }
+      .hero-content h1 { font-size: clamp(2rem, 8vw, 3rem); }
+      .hero-content p { font-size: 1rem; }
+      .hero-content .call { font-size: 1rem; padding: .5rem 1rem; }
+      .promo { display: none; }
+      .section-title { font-size: 2rem; margin-bottom: 1rem; }
+      .img-grid img { height: 12rem; }
     }
 
     /* FOOTER */
     footer {
-      background: #87CEEB;
-      color: #fff;
-      text-align: center;
-      padding: 1.5rem;
-      margin-top: 4rem;
+      background: #87CEEB; color: #fff;
+      text-align: center; padding: 1.5rem; margin-top: 4rem;
       font-size: 1rem;
     }
   </style>
@@ -151,7 +114,7 @@
   <header class="hero">
     <div class="hero-content">
       <h1>Pressure Wash FL</h1>
-      <p>20+ years blasting away mold, algae & mildew </p>
+      <p>20+ years blasting away mold, algae & mildew across Florida</p>
       <p class="call">Call Now × 850‑860‑5318</p>
     </div>
   </header>
@@ -209,9 +172,8 @@
     <h2 class="section-title">Contact Us</h2>
     <p class="text-xl">
       Ready for a transformation?  
-      <strong>Call 850‑860‑5318</strong> 
-      see our ad on 
-      <a href="https://whatsgoodlocal.com/local-services" class="underline">whatsgoodlocal.com/local-services</a>
+      <strong>Call 850‑860‑5318</strong> or visit  
+      <a href="https://whatsgoodlocal.com" class="underline">WhatsGoodLocal.com</a>
     </p>
   </section>
 
