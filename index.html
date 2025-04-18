@@ -6,45 +6,46 @@
   <title>Pressure Wash FL – Professional Pressure Washing</title>
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet"/>
   <style>
-    body { margin:0; font-family:sans-serif; background:#F0F8FF; }
+    body { margin:0; font-family: sans-serif; background: #F0F8FF; }
     header.hero {
-      position:relative; height:60vh;
-      background:url('images/hero.jpg') center/cover no-repeat;
+      position: relative; height: 60vh;
+      background: url('https://source.unsplash.com/1600x900/?pressure-washing,beach-house') center/cover no-repeat;
     }
     header.hero::before {
-      content:''; position:absolute; inset:0;
-      background:rgba(0,0,0,0.4);
+      content: ""; position: absolute; inset:0;
+      background: rgba(0,0,0,0.4);
     }
     .hero-content {
-      position:relative; z-index:1;
-      display:flex;flex-direction:column;
-      justify-content:center;align-items:center;
-      height:100%; color:#FFF; text-align:center;
-      padding:0 1rem;
+      position: relative; z-index:1;
+      display: flex; flex-direction: column;
+      justify-content: center; align-items: center;
+      height: 100%; color: #fff; text-align: center;
+      padding: 0 1rem;
     }
-    .hero-content h1 { font-size:3rem; margin:0; }
-    .hero-content p { margin:.5rem 0; }
+    .hero-content h1 { font-size: 3rem; margin:0; }
+    .hero-content p { margin:0.5rem 0; }
     .hero-content .call {
-      background:#FFD200; color:#003366;
-      padding:.75rem 1.5rem; border-radius:9999px;
-      font-weight:bold;
+      background: #FFD200; color: #003366;
+      padding: .75rem 1.5rem; border-radius: 9999px;
+      font-weight:bold; margin-top:1rem;
     }
-    .container { max-width:1200px; margin:0 auto; padding:2rem 1rem; text-align:center;}
+    .container { max-width: 1200px; margin: 2rem auto; padding: 0 1rem; text-align:center; }
     .section-title {
-      font-size:2rem; color:#004C8C; font-weight:bold;
-      margin-bottom:1rem;
+      font-size: 2rem; color: #004C8C; font-weight: bold;
+      margin-bottom: 1rem;
     }
     .img-grid {
-      display:grid;grid-template-columns:1fr;gap:1rem;
+      display: grid; grid-template-columns: 1fr; gap:1rem;
     }
-    @media(min-width:768px){
-      .img-grid { grid-template-columns:repeat(3,1fr); }
-    }
+    @media(min-width:768px){ .img-grid { grid-template-columns: repeat(3,1fr); } }
     .img-grid img {
-      width:100%;height:auto;
-      border-radius:8px;box-shadow:0 2px 6px rgba(0,0,0,0.15);
+      width:100%; height:auto;
+      border-radius:8px; box-shadow: 0 2px 6px rgba(0,0,0,0.15);
     }
-    footer { background:#87CEEB; color:#fff; text-align:center; padding:1rem;}
+    footer {
+      background: #87CEEB; color:#fff;
+      text-align:center; padding:1rem; margin-top:2rem;
+    }
   </style>
 </head>
 <body>
@@ -61,26 +62,32 @@
   <!-- ABOUT -->
   <section class="container">
     <h2 class="section-title">About Us</h2>
-    <p>We blast away mold, algae & mildew from Florida homes, decks & businesses using industrial‑grade equipment and eco‑friendly detergents—guaranteed spotless results every time!</p>
+    <p>
+      We revitalize Florida homes, decks & businesses—blasting away mold, algae & mildew
+      with pro‑grade equipment and eco‑friendly solutions for a spotless finish every time.
+    </p>
   </section>
 
-  <!-- BEFORE & AFTER -->
+  <!-- BEFORE & AFTER GALLERY -->
   <section class="container">
     <h2 class="section-title">Before &amp; After</h2>
     <div class="img-grid">
-      <img src="images/before.jpg" alt="Before pressure washing">
-      <img src="images/action.jpg" alt="Pressure washing in action">
-      <img src="images/after.jpg" alt="After pressure washing">
+      <!-- Before: dirty surface -->
+      <img src="https://source.unsplash.com/800x500/?dirty,driveway" alt="Before pressure washing">
+      <!-- Action: pressure washing in progress -->
+      <img src="https://source.unsplash.com/800x500/?pressure-washing,action" alt="Pressure washing in action">
+      <!-- After: clean surface -->
+      <img src="https://source.unsplash.com/800x500/?clean,driveway" alt="After pressure washing">
     </div>
   </section>
 
   <!-- WHY CHOOSE US -->
   <section class="container">
     <h2 class="section-title">Why Choose Us?</h2>
-    <ul class="list-disc list-inside text-left mx-auto max-w-xl space-y-2">
+    <ul class="list-disc list-inside mx-auto max-w-xl text-left space-y-2">
       <li>20+ years hands‑on Florida experience</li>
       <li>Industrial‑grade pressure‑washing</li>
-      <li>Eco‑friendly cleaning solutions</li>
+      <li>Eco‑friendly, safe cleaning solutions</li>
       <li>Transparent pricing—no surprises</li>
       <li>Fast, friendly & reliable service</li>
     </ul>
@@ -89,7 +96,12 @@
   <!-- CONTACT -->
   <section class="container">
     <h2 class="section-title">Contact Us</h2>
-    <p>Ready to transform your property? <strong>Call 850‑860‑5318</strong> or visit <a href="https://whatsgoodlocal.com" class="text-blue-600 underline">WhatsGoodLocal.com</a></p>
+    <p>
+      Ready to transform your property?  
+      <strong>Call 850‑860‑5318</strong>  
+      or visit  
+      <a href="https://whatsgoodlocal.com" class="text-blue-600 underline">WhatsGoodLocal.com</a>
+    </p>
   </section>
 
   <!-- FOOTER -->
