@@ -77,6 +77,14 @@
       text-transform: uppercase; letter-spacing: 1px; margin-bottom: 1.5rem;
     }
 
+    /* VIDEO */
+    .video-wrapper {
+      width: 100%; max-width: 900px; margin: 2rem auto;
+    }
+    .video-wrapper video {
+      width: 100%; border-radius: .75rem; box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    }
+
     /* IMAGE GRID */
     .img-grid {
       display: grid; grid-template-columns: 1fr; gap: 1.5rem;
@@ -123,6 +131,15 @@
   <div class="promo">
     <div class="promo-text">Prices starting at just</div>
     <div class="star-badge">$99</div>
+  </div>
+
+  <!-- VIDEO SHOWCASE -->
+  <div class="video-wrapper">
+    <video class="w-full rounded-lg shadow-lg" controls autoplay muted loop playsinline preload="auto">
+      <source src="images/promo.mp4" type="video/mp4">
+      Your browser does not support HTML5 video. 
+      <a href="images/promo.mp4" class="underline">Download the video here</a>.
+    </video>
   </div>
 
   <!-- ABOUT -->
@@ -173,10 +190,7 @@
     <p class="text-xl">
       Ready for a transformation?  
       <strong>Call 850‑860‑5318</strong> See our add on  
-     <a href="https://whatsgoodlocal.com/local-services" class="underline">
-  WhatsGoodLocal
-</a>
-
+      <a href="https://whatsgoodlocal.com/local-services" class="underline">WhatsGoodLocal</a>
     </p>
   </section>
 
