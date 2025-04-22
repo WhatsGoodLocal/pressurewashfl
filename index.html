@@ -64,8 +64,8 @@
   <header class="hero">
     <div class="hero-content">
       <h1>Pressure Wash FL</h1>
-      <p class="subtitle">Proudly Serving Destin, Fort Walton Beach, and surrounding areas</p>
-      <p class="call">Call Now × 850‑860‑5318</p>
+      <p class="subtitle">Proudly Serving Destin, Fort Walton Beach & Surrounding areas</p>
+      <p class="call">Call or Text Now! 850‑860‑5318</p>
     </div>
   </header>
   <!-- PROMO BADGE -->
@@ -74,25 +74,13 @@
     <div class="star-badge">$99</div>
   </div>
   <!-- VIDEO SHOWCASE -->
-  <div class="video-wrapper mb-8">
-    <video id="promoVideo" class="w-full rounded-lg shadow-lg" controls muted loop preload="metadata" poster="images/before.jpg">
+  <div class="video-wrapper">
+    <video class="w-full rounded-lg shadow-lg" controls autoplay muted loop playsinline preload="metadata">
       <source src="images/promo.mp4" type="video/mp4" />
       Your browser does not support HTML5 video.
       <a href="images/promo.mp4" class="underline">Download the video here</a>.
     </video>
   </div>
-  <script>
-    document.addEventListener('DOMContentLoaded', () => {
-      const video = document.getElementById('promoVideo');
-      if (video) {
-        video.load();
-        video.play().catch(() => {
-          console.log('Autoplay prevented; user needs to click play.');
-        });
-      }
-    });
-  </script>
-
   <!-- ABOUT -->
   <section class="container">
     <h2 class="section-title">About Us</h2>
