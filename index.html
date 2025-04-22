@@ -134,15 +134,29 @@
   </div>
 
   <!-- VIDEO SHOWCASE -->
-  <div class="video-wrapper">
-    <video class="w-full rounded-lg shadow-lg" controls autoplay muted loop playsinline preload="auto">
-      <source src="images/promo.mp4" type="video/mp4">
-      Your browser does not support HTML5 video. 
+  <section class="container mb-8">
+    <video class="w-full rounded-lg shadow-lg" controls autoplay muted loop playsinline preload="metadata">
+      <source src="images/promo.mp4" type="video/mp4" />
+      Your browser does not support HTML5 video.
       <a href="images/promo.mp4" class="underline">Download the video here</a>.
     </video>
-  </div>
+  </section>
 
   <!-- ABOUT -->
+  <script>
+    // Attempt autoplay on load; fallback to controls if blocked
+    window.addEventListener('load', () => {
+      const video = document.getElementById('promoVideo');
+      video.muted = true;
+      const playPromise = video.play();
+      if (playPromise !== undefined) {
+        playPromise.catch(() => {
+          // Autoplay prevented; show controls for user interaction
+          video.controls = true;
+        });
+      }
+    });
+  </script>
   <section class="container">
     <h2 class="section-title">About Us</h2>
     <p class="text-xl leading-relaxed">
