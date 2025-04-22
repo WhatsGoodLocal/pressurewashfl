@@ -8,35 +8,12 @@
   <style>
     body { margin:0; font-family:'Helvetica Neue',Helvetica,Arial,sans-serif; background:#fff; color:#004C8C; }
     /* HERO */
-    header.hero {
-      position:relative; height:70vh;
-      background:url('images/hero.jpg') center/cover no-repeat;
-    }
-    header.hero::before {
-      content:""; position:absolute; inset:0;
-      background:rgba(135,206,235,0.6);
-    }
-    .hero-content {
-      position:relative; z-index:1;
-      height:100%; display:flex; flex-direction:column;
-      justify-content:center; align-items:center;
-      text-align:center; padding:0 1rem;
-    }
-    .hero-content h1 {
-      font-size:5rem; margin:0;
-      color:#fff; text-shadow:2px 2px 8px rgba(0,0,0,0.5);
-    }
-    .hero-content .subtitle {
-      margin:0.5rem 0; font-size:2rem; color:#fff;
-      font-weight:500;
-    }
-    .hero-content p.call {
-      margin-top:1.5rem;
-      background:#fff; color:#004C8C;
-      padding:1rem 2rem; border-radius:9999px;
-      font-size:1.25rem; font-weight:bold;
-      transition:transform .2s ease;
-    }
+    header.hero { position:relative; height:70vh; background:url('images/hero.jpg') center/cover no-repeat; }
+    header.hero::before { content:""; position:absolute; inset:0; background:rgba(135,206,235,0.6); }
+    .hero-content { position:relative; z-index:1; height:100%; display:flex; flex-direction:column; justify-content:center; align-items:center; text-align:center; padding:0 1rem; }
+    .hero-content h1 { font-size:5rem; margin:0; color:#fff; text-shadow:2px 2px 8px rgba(0,0,0,0.5); }
+    .hero-content .subtitle { margin:.5rem 0; font-size:2rem; color:#fff; font-weight:500; }
+    .hero-content p.call { margin-top:1.5rem; background:#fff; color:#004C8C; padding:1rem 2rem; border-radius:9999px; font-size:1.25rem; font-weight:bold; transition:transform .2s ease; }
     .hero-content p.call:hover { transform:scale(1.1); }
     /* PROMO BADGE */
     .promo { position:fixed; top:35%; right:1rem; display:flex; align-items:center; z-index:1000; }
@@ -48,7 +25,6 @@
     /* SECTIONS */
     .container { max-width:900px; margin:3rem auto; padding:0 1rem; text-align:center; }
     .section-title { font-size:3rem; color:#004C8C; font-weight:900; text-transform:uppercase; letter-spacing:1px; margin-bottom:1.5rem; }
-    /* IMAGE GRID */
     .img-grid { display:grid; grid-template-columns:1fr; gap:1.5rem; }
     @media(min-width:768px){ .img-grid { grid-template-columns:repeat(3,1fr); } }
     .img-grid img { width:100%; height:16rem; object-fit:cover; border-radius:.75rem; box-shadow:0 4px 12px rgba(0,0,0,0.15); transition:transform .3s ease; }
@@ -60,6 +36,7 @@
   </style>
 </head>
 <body>
+
   <!-- HERO -->
   <header class="hero">
     <div class="hero-content">
@@ -68,39 +45,24 @@
       <p class="call">Call Now × 850‑860‑5318</p>
     </div>
   </header>
+
   <!-- PROMO BADGE -->
   <div class="promo">
     <div class="promo-text">Prices starting at just</div>
     <div class="star-badge">$99</div>
   </div>
+
   <!-- VIDEO SHOWCASE -->
-  <div class="video-wrapper mb-8">
-    <video id="promoVideo" class="w-full rounded-lg shadow-lg" controls muted loop preload="metadata" poster="images/before.jpg">
-      <source src="images/promo.mp4" type="video/mp4" />
-      Your browser does not support HTML5 video.
-      <a href="images/promo.mp4" class="underline">Download the video here</a>.
-    </video>
+  <div class="video-wrapper">
+    <video src="Images/promo.mp4" controls muted loop playsinline preload="metadata"></video>
   </div>
-  <script>
-    document.addEventListener('DOMContentLoaded', () => {
-      const video = document.getElementById('promoVideo');
-      if (video) {
-        video.load();
-        video.play().catch(() => {
-          console.log('Autoplay prevented; user needs to click play.');
-        });
-      }
-    });
-  </script>
 
   <!-- ABOUT -->
   <section class="container">
     <h2 class="section-title">About Us</h2>
-    <p class="text-xl leading-relaxed">
-      We transform Florida homes, decks & businesses with pro‑grade pressure washing  
-      and eco‑friendly solutions. Guaranteed spotless results every time!
-    </p>
+    <p class="text-xl leading-relaxed">We transform Florida homes, decks & businesses with pro‑grade pressure washing and eco‑friendly solutions. Guaranteed spotless results every time!</p>
   </section>
+
   <!-- BEFORE & AFTER -->
   <section class="container">
     <h2 class="section-title">Before &amp; After</h2>
@@ -110,16 +72,14 @@
       <img src="images/after.jpg" alt="After pressure washing">
     </div>
   </section>
+
   <!-- PAINTING -->
   <section class="container">
     <h2 class="section-title">We Also Do Painting</h2>
-    <img src="images/painting.jpg" alt="Professional Painter"
-         class="w-full h-64 object-cover rounded-lg shadow-lg mb-6">
-    <p class="text-xl leading-relaxed">
-      Need a fresh coat? Our expert painters handle interior & exterior jobs  
-      to brighten and protect your property. Quality finishes guaranteed!
-    </p>
+    <img src="images/painting.jpg" alt="Professional Painter" class="w-full h-64 object-cover rounded-lg shadow-lg mb-6">
+    <p class="text-xl leading-relaxed">Need a fresh coat? Our expert painters handle interior & exterior jobs to brighten and protect your property. Quality finishes guaranteed!</p>
   </section>
+
   <!-- WHY CHOOSE US -->
   <section class="container">
     <h2 class="section-title">Why Choose Us?</h2>
@@ -131,16 +91,15 @@
       <li>Fast, friendly & reliable service</li>
     </ul>
   </section>
+
   <!-- CONTACT -->
   <section class="container mb-8">
     <h2 class="section-title">Contact Us</h2>
-    <p class="text-xl">
-      Ready for a transformation?  
-      <strong>Call 850‑860‑5318</strong> See our add on  
-      <a href="https://whatsgoodlocal.com/local-services" class="underline">WhatsGoodLocal</a>
-    </p>
+    <p class="text-xl">Ready for a transformation? <strong>Call 850‑860‑5318</strong> See our add on  <a href="https://whatsgoodlocal.com/local-services" class="underline">WhatsGoodLocal</a></p>
   </section>
+
   <!-- FOOTER -->
   <footer>&copy; 2025 Pressure Wash FL | All Rights Reserved</footer>
+
 </body>
 </html>
