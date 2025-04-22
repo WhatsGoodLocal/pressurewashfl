@@ -3,214 +3,132 @@
 <head>
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Pressure Wash FL
-    Destin Fl and surrounding areas – Pro Pressure Washing & Painting</title>
+  <title>Pressure Wash FL – Pro Pressure Washing & Painting</title>
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet"/>
   <style>
-    /* Base Styles */
-    body { margin: 0; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; background: #fff; color: #004C8C; }
-
+    body { margin:0; font-family:'Helvetica Neue',Helvetica,Arial,sans-serif; background:#fff; color:#004C8C; }
     /* HERO */
     header.hero {
-      position: relative;
-      height: 70vh;
-      background: url('images/hero.jpg') center/cover no-repeat;
+      position:relative; height:70vh;
+      background:url('images/hero.jpg') center/cover no-repeat;
     }
     header.hero::before {
-      content: "";
-      position: absolute;
-      inset: 0;
-      background: rgba(135,206,235,0.6);
+      content:""; position:absolute; inset:0;
+      background:rgba(135,206,235,0.6);
     }
     .hero-content {
-      position: relative; z-index: 1;
-      height: 100%; display: flex; flex-direction: column;
-      justify-content: center; align-items: center;
-      text-align: center; padding: 0 1rem;
+      position:relative; z-index:1;
+      height:100%; display:flex; flex-direction:column;
+      justify-content:center; align-items:center;
+      text-align:center; padding:0 1rem;
     }
     .hero-content h1 {
-      font-size: 4rem; margin: 0;
-      color: #fff; text-shadow: 2px 2px 8px rgba(0,0,0,0.5);
+      font-size:5rem; margin:0;
+      color:#fff; text-shadow:2px 2px 8px rgba(0,0,0,0.5);
     }
-    .hero-content p {
-      margin: .75rem 0; font-size: 1.5rem; color: #fff;
+    .hero-content .subtitle {
+      margin:0.5rem 0; font-size:2rem; color:#fff;
+      font-weight:500;
     }
-    .hero-content .call {
-      margin-top: 1.5rem;
-      background: #fff; color: #004C8C;
-      padding: 1rem 2rem; border-radius: 9999px;
-      font-size: 1.25rem; font-weight: bold;
-      transition: transform .2s ease;
+    .hero-content p.call {
+      margin-top:1.5rem;
+      background:#fff; color:#004C8C;
+      padding:1rem 2rem; border-radius:9999px;
+      font-size:1.25rem; font-weight:bold;
+      transition:transform .2s ease;
     }
-    .hero-content .call:hover { transform: scale(1.1); }
-
+    .hero-content p.call:hover { transform:scale(1.1); }
     /* PROMO BADGE */
-    .promo {
-      position: fixed; top: 35%; right: 1rem;
-      display: flex; align-items: center; z-index: 1000;
-    }
-    .promo-text {
-      background: #fff; color: #004C8C;
-      padding: .75rem 1.25rem; border-radius: .5rem;
-      font-size: 1.125rem; font-weight: bold;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.2);
-    }
-    .star-badge {
-      width: 180px; height: 180px; margin-left: .5rem;
-      background: gold; border: 5px solid #004C8C;
-      clip-path: polygon(
-        50% 0%, 61% 35%, 98% 35%, 68% 57%,
-        79% 91%, 50% 70%, 21% 91%, 32% 57%,
-        2% 35%, 39% 35%
-      );
-      display: flex; align-items: center; justify-content: center;
-      font-size: 1.75rem; font-weight: bold; color: #004C8C;
-      text-shadow: 1px 1px 2px rgba(255,255,255,0.8);
-      box-shadow: 0 2px 6px rgba(0,0,0,0.2);
-    }
-
-    /* SECTIONS */
-    .container {
-      max-width: 900px; margin: 3rem auto; padding: 0 1rem; text-align: center;
-    }
-    .section-title {
-      font-size: 3rem; color: #004C8C; font-weight: 900;
-      text-transform: uppercase; letter-spacing: 1px; margin-bottom: 1.5rem;
-    }
-
+    .promo { position:fixed; top:35%; right:1rem; display:flex; align-items:center; z-index:1000; }
+    .promo-text { background:#fff; color:#004C8C; padding:.75rem 1.25rem; border-radius:.5rem; font-size:1.125rem; font-weight:bold; box-shadow:0 2px 6px rgba(0,0,0,0.2); }
+    .star-badge { width:180px; height:180px; margin-left:.5rem; background:gold; border:5px solid #004C8C; clip-path:polygon(50% 0%,61% 35%,98% 35%,68% 57%,79% 91%,50% 70%,21% 91%,32% 57%,2% 35%,39% 35%); display:flex; align-items:center; justify-content:center; font-size:1.75rem; font-weight:bold; color:#004C8C; text-shadow:1px 1px 2px rgba(255,255,255,0.8); box-shadow:0 2px 6px rgba(0,0,0,0.2); }
     /* VIDEO */
-    .video-wrapper {
-      width: 100%; max-width: 900px; margin: 2rem auto;
-    }
-    .video-wrapper video {
-      width: 100%; border-radius: .75rem; box-shadow: 0 4px 12px rgba(0,0,0,0.15);
-    }
-
+    .video-wrapper { width:100%; max-width:900px; margin:2rem auto; }
+    .video-wrapper video { width:100%; border-radius:.75rem; box-shadow:0 4px 12px rgba(0,0,0,0.15); }
+    /* SECTIONS */
+    .container { max-width:900px; margin:3rem auto; padding:0 1rem; text-align:center; }
+    .section-title { font-size:3rem; color:#004C8C; font-weight:900; text-transform:uppercase; letter-spacing:1px; margin-bottom:1.5rem; }
     /* IMAGE GRID */
-    .img-grid {
-      display: grid; grid-template-columns: 1fr; gap: 1.5rem;
-    }
-    @media(min-width:768px) { .img-grid { grid-template-columns: repeat(3,1fr); } }
-    .img-grid img {
-      width: 100%; height: 16rem; object-fit: cover;
-      border-radius: .75rem; box-shadow: 0 4px 12px rgba(0,0,0,0.15);
-      transition: transform .3s ease;
-    }
-    .img-grid img:hover { transform: scale(1.05); }
-
-    /* MOBILE ADJUSTMENTS */
-    @media(max-width:640px) {
-      header.hero { height: 50vh; }
-      .hero-content h1 { font-size: clamp(2rem, 8vw, 3rem); }
-      .hero-content p { font-size: 1rem; }
-      .hero-content .call { font-size: 1rem; padding: .5rem 1rem; }
-      .promo { display: none; }
-      .section-title { font-size: 2rem; margin-bottom: 1rem; }
-      .img-grid img { height: 12rem; }
-    }
-
+    .img-grid { display:grid; grid-template-columns:1fr; gap:1.5rem; }
+    @media(min-width:768px){ .img-grid { grid-template-columns:repeat(3,1fr); } }
+    .img-grid img { width:100%; height:16rem; object-fit:cover; border-radius:.75rem; box-shadow:0 4px 12px rgba(0,0,0,0.15); transition:transform .3s ease; }
+    .img-grid img:hover { transform:scale(1.05); }
+    /* MOBILE */
+    @media(max-width:640px){ header.hero { height:50vh; } .hero-content h1 { font-size:clamp(2rem,8vw,4rem); } .hero-content .subtitle { font-size:1.5rem; } .hero-content p.call { font-size:1rem; padding:.5rem 1rem; } .promo { display:none; } .section-title { font-size:2rem; margin-bottom:1rem; } .img-grid img { height:12rem; } }
     /* FOOTER */
-    footer {
-      background: #87CEEB; color: #fff;
-      text-align: center; padding: 1.5rem; margin-top: 4rem;
-      font-size: 1rem;
-    }
+    footer { background:#87CEEB; color:#fff; text-align:center; padding:1.5rem; margin-top:4rem; font-size:1rem; }
   </style>
 </head>
 <body>
-
   <!-- HERO -->
   <header class="hero">
     <div class="hero-content">
       <h1>Pressure Wash FL</h1>
-      <p>20+ years blasting away mold, algae & mildew across Florida</p>
-      <p class="call">Call Now × 850‑860‑5318</p>
+      <p class="subtitle">Proudly Serving Destin, Fort Walton Beach, and surrounding areas</p>
+      <p class="call">Call Now × 850‑860‑5318</p>
     </div>
   </header>
-
   <!-- PROMO BADGE -->
   <div class="promo">
     <div class="promo-text">Prices starting at just</div>
     <div class="star-badge">$99</div>
   </div>
-
   <!-- VIDEO SHOWCASE -->
-  <section class="container mb-8">
+  <div class="video-wrapper">
     <video class="w-full rounded-lg shadow-lg" controls autoplay muted loop playsinline preload="metadata">
       <source src="images/promo.mp4" type="video/mp4" />
       Your browser does not support HTML5 video.
       <a href="images/promo.mp4" class="underline">Download the video here</a>.
     </video>
-  </section>
-
+  </div>
   <!-- ABOUT -->
-  <script>
-    // Attempt autoplay on load; fallback to controls if blocked
-    window.addEventListener('load', () => {
-      const video = document.getElementById('promoVideo');
-      video.muted = true;
-      const playPromise = video.play();
-      if (playPromise !== undefined) {
-        playPromise.catch(() => {
-          // Autoplay prevented; show controls for user interaction
-          video.controls = true;
-        });
-      }
-    });
-  </script>
   <section class="container">
     <h2 class="section-title">About Us</h2>
     <p class="text-xl leading-relaxed">
-      We transform Destin Florida area homes, decks & businesses with pro‑grade pressure washing  
+      We transform Florida homes, decks & businesses with pro‑grade pressure washing  
       and eco‑friendly solutions. Guaranteed spotless results every time!
     </p>
   </section>
-
   <!-- BEFORE & AFTER -->
   <section class="container">
     <h2 class="section-title">Before &amp; After</h2>
     <div class="img-grid">
       <img src="images/before.jpg" alt="Before pressure washing">
       <img src="images/action.jpg" alt="Pressure washing in action">
-      <img src="images/after.jpg"  alt="After pressure washing">
+      <img src="images/after.jpg" alt="After pressure washing">
     </div>
   </section>
-
   <!-- PAINTING -->
   <section class="container">
     <h2 class="section-title">We Also Do Painting</h2>
     <img src="images/painting.jpg" alt="Professional Painter"
          class="w-full h-64 object-cover rounded-lg shadow-lg mb-6">
     <p class="text-xl leading-relaxed">
-      Need a fresh coat? Or touch ups? Our expert painters handle interior & exterior jobs  
+      Need a fresh coat? Our expert painters handle interior & exterior jobs  
       to brighten and protect your property. Quality finishes guaranteed!
     </p>
   </section>
-
   <!-- WHY CHOOSE US -->
   <section class="container">
     <h2 class="section-title">Why Choose Us?</h2>
     <ul class="list-disc list-inside mx-auto max-w-xl text-left space-y-3 text-lg">
-      <li>20+ years hands‑on experience</li>
+      <li>20+ years hands‑on Florida experience</li>
       <li>Industrial‑grade pressure‑washing equipment</li>
       <li>Eco‑friendly, safe cleaning & painting solutions</li>
       <li>Transparent pricing—no surprises</li>
       <li>Fast, friendly & reliable service</li>
     </ul>
   </section>
-
   <!-- CONTACT -->
   <section class="container mb-8">
     <h2 class="section-title">Contact Us</h2>
     <p class="text-xl">
       Ready for a transformation?  
-      <strong>Call 850‑860‑5318</strong> See our add on  
+      <strong>Call 850‑860‑5318</strong> See our add on  
       <a href="https://whatsgoodlocal.com/local-services" class="underline">WhatsGoodLocal</a>
     </p>
   </section>
-
   <!-- FOOTER -->
-  <footer>&copy; 2025 Pressure Wash FL | All Rights Reserved</footer>
-
+  <footer>&copy; 2025 Pressure Wash FL | All Rights Reserved</footer>
 </body>
 </html>
