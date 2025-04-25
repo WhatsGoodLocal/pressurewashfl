@@ -9,7 +9,7 @@
   <meta name="description" content="Pressure Wash FL – 20+ years in Destin, Fort Walton Beach & surrounding areas. Pro pressure washing, mold/algae removal, painting. $99 promo!" />
   <link rel="canonical" href="https://your-github-pages-url/index.html"/>
 
-  <!-- Open Graph -->
+  <!-- Open Graph for social previews -->
   <meta property="og:title" content="Pressure Wash FL | Destin’s Premier Cleaning Pros"/>
   <meta property="og:description" content="20+ years blasting away mold, algae & mildew across Destin and FWB. Pricing from $99!" />
   <meta property="og:image" content="https://your-github-pages-url/images/hero.jpg"/>
@@ -22,7 +22,7 @@
   <meta name="twitter:description" content="Expert pressure washing & painting from just $99. Serving Destin & FWB!" />
   <meta name="twitter:image" content="https://your-github-pages-url/images/hero.jpg"/>
 
-  <!-- Structured Data -->
+  <!-- Structured Data (LocalBusiness) -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -56,23 +56,27 @@
     .hero-content p.call { margin-top:1.5rem; background:#fff; color:#004C8C; padding:1rem 2rem; border-radius:9999px; font-size:1.25rem; font-weight:bold; transition:transform .2s ease; }
     .hero-content p.call:hover { transform:scale(1.1); }
 
-    /* PROMO: turtle left, star right */
+    /* PROMO BLOCK */
     .promo {
       position: fixed;
       top: 35%;
       right: 1rem;
-      display: flex;
-      align-items: center;
-      z-index: 1000;
+      width: 200px;
+      height: 200px;
+      pointer-events: none;
     }
     .promo-logo {
-      width: 120px; /* bigger turtle */
-      position: relative;
+      position: absolute;
+      width: 120px;
+      left: -10px;            /* overlap ~15% */
+      top: 50%;
+      transform: translateY(-50%);
       z-index: 2;
-      margin-right: -20px; /* overlap ~15% into star */
     }
     .star-badge {
-      position: relative;
+      position: absolute;
+      right: 0;
+      top: 0;
       width: 180px;
       height: 180px;
       background: gold;
@@ -89,20 +93,23 @@
       z-index: 1;
     }
     .star-badge .star-text {
-      font-size: 1.75rem;
+      font-size: 2rem;
       font-weight: bold;
       color: #004C8C;
     }
     .promo-text-below {
-      margin-top: 0.5rem;
+      position: absolute;
+      top: 190px;             /* just below the star */
+      left: 50%;
+      transform: translateX(-50%);
       background: #fff;
       color: #004C8C;
       padding: 0.5rem 1rem;
       border-radius: 0.5rem;
-      font-size: 1.125rem;
+      font-size: 1rem;
       font-weight: bold;
       box-shadow: 0 2px 6px rgba(0,0,0,0.2);
-      text-align: center;
+      pointer-events: auto;
     }
 
     /* VIDEO */
@@ -147,7 +154,7 @@
 
   <!-- PROMO BLOCK -->
   <div class="promo">
-    <img src="images/logo.png" alt="Logo" class="promo-logo"/>
+    <img src="images/logo.png" alt="Our Logo" class="promo-logo" />
     <div class="star-badge">
       <span class="star-text">$99</span>
     </div>
@@ -175,9 +182,9 @@
   <section class="container">
     <h2 class="section-title">Before &amp; After</h2>
     <div class="img-grid">
-      <img src="images/before.jpg" alt="Before pressure washing in Destin, FL"/>
-      <img src="images/action.jpg" alt="Pressure washing in action on a deck"/>
-      <img src="images/after.jpg" alt="After professional pressure washing"/>
+      <img src="images/before.jpg" alt="Before pressure washing in Destin, FL">
+      <img src="images/action.jpg" alt="Pressure washing in action on a deck">
+      <img src="images/after.jpg" alt="After professional pressure washing">
     </div>
   </section>
 
@@ -185,7 +192,7 @@
   <section class="container">
     <h2 class="section-title">We Also Do Painting</h2>
     <img src="images/painting.jpg" alt="Exterior painting service"
-         class="w-full h-64 object-cover rounded-lg shadow-lg mb-6"/>
+         class="w-full h-64 object-cover rounded-lg shadow-lg mb-6">
     <p class="text-xl leading-relaxed">
       Need a fresh coat? Our expert painters handle interior & exterior jobs  
       to brighten and protect your property. Quality finishes guaranteed!
@@ -221,9 +228,8 @@
   <script>
     document.addEventListener('DOMContentLoaded', () => {
       const vid = document.getElementById('promoVideo');
-      setTimeout(() => vid.play().catch(()=>{}), 2000);
+      setTimeout(() => vid.play().catch(() => console.warn('Autoplay prevented')), 2000);
     });
   </script>
-
 </body>
 </html>
