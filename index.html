@@ -128,15 +128,17 @@
     .img-grid img:hover { transform:scale(1.05); }
 
     /* MOBILE */
-    @media(max-width:640px){
-      header.hero { height:50vh; }
-      .hero-content h1 { font-size:clamp(2rem,8vw,4rem); }
-      .hero-content .subtitle { font-size:1.5rem; }
-      .hero-content p.call { font-size:1rem; padding:.5rem 1rem; }
-      .promo { display:none; }
-      .section-title { font-size:2rem; margin-bottom:1rem; }
-      .img-grid img { height:12rem; }
-    }
+@media(max-width:640px){
+  header.hero { height:50vh; }
+  .hero-content h1 { font-size:clamp(2rem,8vw,4rem); }
+  .hero-content .subtitle { font-size:1.5rem; }
+  .hero-content p.call { font-size:1rem; padding:.5rem 1rem; }
+  /* keep the promo visible on phones */
+  /* .promo { display:none; } */
+  .section-title { font-size:2rem; margin-bottom:1rem; }
+  .img-grid img { height:12rem; }
+}
+
 
     /* FOOTER */
     footer { background:#87CEEB; color:#fff; text-align:center; padding:1.5rem; margin-top:4rem; font-size:1rem; }
