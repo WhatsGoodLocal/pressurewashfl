@@ -57,8 +57,8 @@
     /* PROMO BADGE */
     .promo { position:fixed; top:35%; right:1rem; display:flex; align-items:center; z-index:1000; }
     .promo-text { background:#fff; color:#004C8C; padding:.75rem 1.25rem; border-radius:.5rem; font-size:1.125rem; font-weight:bold; box-shadow:0 2px 6px rgba(0,0,0,0.2); }
-    .star-badge { width:180px; height:180px; margin-left:.5rem; background:gold; border:5px solid #004C8C; clip-path:polygon(50% 0%,61% 35%,98% 35%,68% 57%,79% 91%,50% 70%,21% 91%,32% 57%,2% 35%,39% 35%); display:flex; align-items:center; justify-content:center; font-size:1.75rem; font-weight:bold; color:#004C8C; text-shadow:1px 1px 2px rgba(255,255,255,0.8); box-shadow:0 2px 6px rgba(0,0,0,0.2); }
-    .promo-logo { width:60px; height:auto; margin:0 .5rem 0 0; }
+    .promo-logo { width:180px; height:180px; margin:0 0.25rem 0 0; }
+    .star-badge { width:180px; height:180px; background:gold; border:5px solid #004C8C; clip-path:polygon(50% 0%,61% 35%,98% 35%,68% 57%,79% 91%,50% 70%,21% 91%,32% 57%,2% 35%,39% 35%); display:flex; align-items:center; justify-content:center; font-size:1.75rem; font-weight:bold; color:#004C8C; text-shadow:1px 1px 2px rgba(255,255,255,0.8); box-shadow:0 2px 6px rgba(0,0,0,0.2); }
     /* VIDEO */
     .video-wrapper { width:100%; max-width:900px; margin:2rem auto; }
     .video-wrapper video { width:100%; border-radius:.75rem; box-shadow:0 4px 12px rgba(0,0,0,0.15); }
@@ -100,72 +100,3 @@
       <source src="images/promo.mp4" type="video/mp4" />
       Your browser doesn’t support embedded videos.
     </video>
-  </div>
-
-  <!-- ABOUT -->
-  <section class="container">
-    <h2 class="section-title">About Us</h2>
-    <p class="text-xl leading-relaxed">
-      We transform Florida homes, decks & businesses with pro-grade pressure washing  
-      and eco-friendly solutions. Guaranteed spotless results every time!
-    </p>
-  </section>
-
-  <!-- BEFORE & AFTER -->
-  <section class="container">
-    <h2 class="section-title">Before &amp; After</h2>
-    <div class="img-grid">
-      <img src="images/before.jpg" alt="Before pressure washing in Destin, FL">
-      <img src="images/action.jpg" alt="Pressure washing in action on a deck">
-      <img src="images/after.jpg" alt="After professional pressure washing">
-    </div>
-  </section>
-
-  <!-- PAINTING -->
-  <section class="container">
-    <h2 class="section-title">We Also Do Painting</h2>
-    <img src="images/painting.jpg" alt="Exterior painting service"
-         class="w-full h-64 object-cover rounded-lg shadow-lg mb-6">
-    <p class="text-xl leading-relaxed">
-      Need a fresh coat? Our expert painters handle interior & exterior jobs  
-      to brighten and protect your property. Quality finishes guaranteed!
-    </p>
-  </section>
-
-  <!-- WHY CHOOSE US -->
-  <section class="container">
-    <h2 class="section-title">Why Choose Us?</h2>
-    <ul class="list-disc list-inside mx-auto max-w-xl text-left space-y-3 text-lg">
-      <li>20+ years hands-on Florida experience</li>
-      <li>Industrial-grade pressure-washing equipment</li>
-      <li>Eco-friendly, safe cleaning & painting solutions</li>
-      <li>Transparent pricing—no surprises</li>
-      <li>Fast, friendly & reliable service</li>
-    </ul>
-  </section>
-
-  <!-- CONTACT -->
-  <section class="container mb-8">
-    <h2 class="section-title">Contact Us</h2>
-    <p class="text-xl">
-      Ready for a transformation?  
-      <strong>Call 850-860-5318</strong> or visit  
-      <a href="https://whatsgoodlocal.com/local-services" class="underline">WhatsGoodLocal.com</a>
-    </p>
-  </section>
-
-  <!-- FOOTER -->
-  <footer>&copy; 2025 Pressure Wash FL | All Rights Reserved</footer>
-
-  <!-- Autoplay Script -->
-  <script>
-    document.addEventListener('DOMContentLoaded', () => {
-      const vid = document.getElementById('promoVideo');
-      setTimeout(() => {
-        vid.play().catch(() => console.warn('Autoplay prevented'));
-      }, 2000);
-    });
-  </script>
-
-</body>
-</html>
