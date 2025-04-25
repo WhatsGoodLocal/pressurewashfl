@@ -22,7 +22,7 @@
   <meta name="twitter:description" content="Expert pressure washing & painting from just $99. Serving Destin & FWB!" />
   <meta name="twitter:image" content="https://your-github-pages-url/images/hero.jpg"/>
 
-  <!-- LocalBusiness structured data -->
+  <!-- Structured Data -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -56,15 +56,20 @@
     .hero-content p.call { margin-top:1.5rem; background:#fff; color:#004C8C; padding:1rem 2rem; border-radius:9999px; font-size:1.25rem; font-weight:bold; transition:transform .2s ease; }
     .hero-content p.call:hover { transform:scale(1.1); }
 
-    /* UPDATED PROMO */
+    /* PROMO: turtle left, star right */
     .promo {
       position: fixed;
       top: 35%;
       right: 1rem;
       display: flex;
-      flex-direction: column;
       align-items: center;
       z-index: 1000;
+    }
+    .promo-logo {
+      width: 120px; /* bigger turtle */
+      position: relative;
+      z-index: 2;
+      margin-right: -20px; /* overlap ~15% into star */
     }
     .star-badge {
       position: relative;
@@ -81,21 +86,12 @@
       align-items: center;
       justify-content: center;
       box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+      z-index: 1;
     }
     .star-badge .star-text {
       font-size: 1.75rem;
       font-weight: bold;
       color: #004C8C;
-      z-index: 1;
-    }
-    .promo-logo {
-      position: absolute;
-      width: 100px; /* slightly over half the star */
-      height: auto;
-      top: 50%;
-      left: 50%;
-      transform: translate(15%, -15%); /* pushes it ~15% into the star */
-      z-index: 2;
     }
     .promo-text-below {
       margin-top: 0.5rem;
@@ -149,11 +145,11 @@
     </div>
   </header>
 
-  <!-- UPDATED PROMO -->
+  <!-- PROMO BLOCK -->
   <div class="promo">
+    <img src="images/logo.png" alt="Logo" class="promo-logo"/>
     <div class="star-badge">
       <span class="star-text">$99</span>
-      <img src="images/logo.png" alt="Logo" class="promo-logo"/>
     </div>
     <div class="promo-text-below">Starting at just</div>
   </div>
@@ -221,11 +217,11 @@
   <!-- FOOTER -->
   <footer>&copy; 2025 Pressure Wash FL | All Rights Reserved</footer>
 
-  <!-- OPTIONAL Autoplay Script -->
+  <!-- Autoplay Script -->
   <script>
     document.addEventListener('DOMContentLoaded', () => {
       const vid = document.getElementById('promoVideo');
-      setTimeout(() => vid.play().catch(() =>{}), 2000);
+      setTimeout(() => vid.play().catch(()=>{}), 2000);
     });
   </script>
 
