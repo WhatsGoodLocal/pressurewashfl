@@ -9,7 +9,7 @@
   <meta name="description" content="Pressure Wash FL – 20+ years in Destin, Fort Walton Beach & surrounding areas. Pro pressure washing, mold/algae removal, painting. $99 promo!" />
   <link rel="canonical" href="https://your-github-pages-url/index.html"/>
 
-  <!-- Open Graph for social previews -->
+  <!-- Open Graph -->
   <meta property="og:title" content="Pressure Wash FL | Destin’s Premier Cleaning Pros"/>
   <meta property="og:description" content="20+ years blasting away mold, algae & mildew across Destin and FWB. Pricing from $99!" />
   <meta property="og:image" content="https://your-github-pages-url/images/hero.jpg"/>
@@ -22,7 +22,7 @@
   <meta name="twitter:description" content="Expert pressure washing & painting from just $99. Serving Destin & FWB!" />
   <meta name="twitter:image" content="https://your-github-pages-url/images/hero.jpg"/>
 
-  <!-- Structured Data (LocalBusiness) -->
+  <!-- LocalBusiness structured data -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -46,6 +46,7 @@
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet"/>
   <style>
     body { margin:0; font-family:'Helvetica Neue',Helvetica,Arial,sans-serif; background:#fff; color:#004C8C; }
+
     /* HERO */
     header.hero { position:relative; height:70vh; background:url('images/hero.jpg') center/cover no-repeat; }
     header.hero::before { content:""; position:absolute; inset:0; background:rgba(135,206,235,0.6); }
@@ -55,7 +56,7 @@
     .hero-content p.call { margin-top:1.5rem; background:#fff; color:#004C8C; padding:1rem 2rem; border-radius:9999px; font-size:1.25rem; font-weight:bold; transition:transform .2s ease; }
     .hero-content p.call:hover { transform:scale(1.1); }
 
-    /* PROMO BADGE (desktop) */
+    /* PROMO BADGE */
     .promo {
       position:fixed;
       top:35%;
@@ -63,8 +64,33 @@
       display:flex;
       align-items:center;
       z-index:1000;
+      pointer-events:none;
+    }
+    .promo-logo {
+      width:150px;   /* larger logo */
+      height:auto;
+      margin-right:-25px; /* overlap ~15% */
+      z-index:2;
+    }
+    .star-badge {
+      width:180px;
+      height:180px;
+      background:gold;
+      border:5px solid #004C8C;
+      clip-path:polygon(50% 0%,61% 35%,98% 35%,68% 57%,79% 91%,50% 70%,21% 91%,32% 57%,2% 35%,39% 35%);
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      box-shadow:0 2px 6px rgba(0,0,0,0.2);
+      z-index:1;
+    }
+    .star-badge .star-text {
+      font-size:2rem;
+      font-weight:bold;
+      color:#004C8C;
     }
     .promo-text {
+      margin-left:1rem;
       background:#fff;
       color:#004C8C;
       padding:.75rem 1.25rem;
@@ -72,27 +98,6 @@
       font-size:1.125rem;
       font-weight:bold;
       box-shadow:0 2px 6px rgba(0,0,0,0.2);
-    }
-    .star-badge {
-      width:180px;
-      height:180px;
-      margin:0 0 0 .5rem;
-      background:gold;
-      border:5px solid #004C8C;
-      clip-path:polygon(50% 0%,61% 35%,98% 35%,68% 57%,79% 91%,50% 70%,21% 91%,32% 57%,2% 35%,39% 35%);
-      display:flex;
-      align-items:center;
-      justify-content:center;
-      font-size:1.75rem;
-      font-weight:bold;
-      color:#004C8C;
-      text-shadow:1px 1px 2px rgba(255,255,255,0.8);
-      box-shadow:0 2px 6px rgba(0,0,0,0.2);
-    }
-    .turtle-logo {
-      width:140px;  /* adjust as needed */
-      height:auto;
-      z-index:1001; /* sit on top of star */
     }
 
     /* VIDEO */
@@ -109,22 +114,21 @@
     .img-grid img { width:100%; height:16rem; object-fit:cover; border-radius:.75rem; box-shadow:0 4px 12px rgba(0,0,0,0.15); transition:transform .3s ease; }
     .img-grid img:hover { transform:scale(1.05); }
 
-    /* MOBILE ADJUSTMENTS */
+    /* MOBILE */
     @media(max-width:640px){
       header.hero { height:50vh; }
       .hero-content h1 { font-size:clamp(2rem,8vw,4rem); }
       .hero-content .subtitle { font-size:1.5rem; }
       .hero-content p.call { font-size:1rem; padding:.5rem 1rem; }
 
-      /* hide desktop promo and reposition at bottom-right */
+      /* reposition promo down-right but lifted */
       .promo {
-        top: auto;
-        right: 1rem;
-        bottom: 2rem;    /* lifted up so “Starting at just” shows */
+        top:auto;
+        bottom:3rem;
       }
-      /* add mobile spacing between logo & star */
-      .turtle-logo {
-        margin-right: 1rem;
+      /* slightly more gap between logo & star */
+      .promo-logo {
+        margin-right:1rem;
       }
     }
 
@@ -145,8 +149,8 @@
 
   <!-- PROMO BADGE -->
   <div class="promo">
-    <img src="images/turtle.png" class="turtle-logo" alt="Cartoon Turtle"/>
-    <div class="star-badge">$99</div>
+    <img src="images/logo.png" alt="Our Logo" class="promo-logo"/>
+    <div class="star-badge"><span class="star-text">$99</span></div>
     <div class="promo-text">Starting at just</div>
   </div>
 
@@ -217,9 +221,7 @@
   <script>
     document.addEventListener('DOMContentLoaded', () => {
       const vid = document.getElementById('promoVideo');
-      setTimeout(() => {
-        vid.play().catch(() => console.warn('Autoplay prevented'));
-      }, 2000);
+      setTimeout(() => vid.play().catch(() => console.warn('Autoplay prevented')), 2000);
     });
   </script>
 </body>
