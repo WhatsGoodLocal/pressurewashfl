@@ -46,6 +46,7 @@
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet"/>
   <style>
     body { margin:0; font-family:'Helvetica Neue',Helvetica,Arial,sans-serif; background:#fff; color:#004C8C; }
+
     /* HERO */
     header.hero { position:relative; height:70vh; background:url('images/hero.jpg') center/cover no-repeat; }
     header.hero::before { content:""; position:absolute; inset:0; background:rgba(135,206,235,0.6); }
@@ -54,22 +55,90 @@
     .hero-content .subtitle { margin:0.5rem 0; font-size:2rem; color:#fff; font-weight:500; }
     .hero-content p.call { margin-top:1.5rem; background:#fff; color:#004C8C; padding:1rem 2rem; border-radius:9999px; font-size:1.25rem; font-weight:bold; transition:transform .2s ease; }
     .hero-content p.call:hover { transform:scale(1.1); }
-    /* PROMO BADGE */
-    .promo { position:fixed; top:35%; right:1rem; display:flex; align-items:center; z-index:1000; }
-    .promo-text { background:#fff; color:#004C8C; padding:.75rem 1.25rem; border-radius:.5rem; font-size:1.125rem; font-weight:bold; box-shadow:0 2px 6px rgba(0,0,0,0.2); }
-    .promo-logo { width:180px; height:180px; margin:0 -27px 0 0; z-index:1; }
-    .star-badge { width:180px; height:180px; background:gold; border:5px solid #004C8C; clip-path:polygon(50% 0%,61% 35%,98% 35%,68% 57%,79% 91%,50% 70%,21% 91%,32% 57%,2% 35%,39% 35%); display:flex; align-items:center; justify-content:center; font-size:1.75rem; font-weight:bold; color:#004C8C; text-shadow:1px 1px 2px rgba(255,255,255,0.8); box-shadow:0 2px 6px rgba(0,0,0,0.2); position:relative; z-index:0; }
+
+    /* UPDATED PROMO BADGE */
+    .promo {
+      position: fixed;
+      top: 35%;
+      right: 1rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      z-index: 1000;
+    }
+    /* gold star */
+    .star-badge {
+      position: relative;
+      width: 180px;
+      height: 180px;
+      background: gold;
+      border: 5px solid #004C8C;
+      clip-path: polygon(
+        50% 0%, 61% 35%, 98% 35%, 68% 57%,
+        79% 91%, 50% 70%, 21% 91%, 32% 57%,
+        2% 35%, 39% 35%
+      );
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+    }
+    /* the $99 text */
+    .star-text {
+      font-size: 1.75rem;
+      font-weight: bold;
+      color: #004C8C;
+      z-index: 1;
+    }
+    /* your logo overlapping ~15% */
+    .promo-logo {
+      position: absolute;
+      width: 80px;
+      height: auto;
+      bottom: 0;
+      right: 0;
+      transform: translate(20%, 20%);
+      z-index: 2;
+    }
+    /* "Starting at just" below */
+    .promo-text-below {
+      margin-top: 0.75rem;
+      background: #fff;
+      color: #004C8C;
+      padding: 0.5rem 1rem;
+      border-radius: 0.5rem;
+      font-size: 1.125rem;
+      font-weight: bold;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+      text-align: center;
+    }
+
     /* VIDEO */
     .video-wrapper { width:100%; max-width:900px; margin:2rem auto; }
     .video-wrapper video { width:100%; border-radius:.75rem; box-shadow:0 4px 12px rgba(0,0,0,0.15); }
+
     /* SECTIONS */
     .container { max-width:900px; margin:3rem auto; padding:0 1rem; text-align:center; }
     .section-title { font-size:3rem; color:#004C8C; font-weight:900; text-transform:uppercase; letter-spacing:1px; margin-bottom:1.5rem; }
+
+    /* IMAGE GRID */
     .img-grid { display:grid; grid-template-columns:1fr; gap:1.5rem; }
     @media(min-width:768px){ .img-grid { grid-template-columns:repeat(3,1fr); } }
     .img-grid img { width:100%; height:16rem; object-fit:cover; border-radius:.75rem; box-shadow:0 4px 12px rgba(0,0,0,0.15); transition:transform .3s ease; }
     .img-grid img:hover { transform:scale(1.05); }
-    @media(max-width:640px){ header.hero { height:50vh; } .hero-content h1 { font-size:clamp(2rem,8vw,4rem); } .hero-content .subtitle { font-size:1.5rem; } .hero-content p.call { font-size:1rem; padding:.5rem 1rem; } .promo { display:none; } .section-title { font-size:2rem; margin-bottom:1rem; } .img-grid img { height:12rem; } }
+
+    /* MOBILE */
+    @media(max-width:640px){
+      header.hero { height:50vh; }
+      .hero-content h1 { font-size:clamp(2rem,8vw,4rem); }
+      .hero-content .subtitle { font-size:1.5rem; }
+      .hero-content p.call { font-size:1rem; padding:.5rem 1rem; }
+      .promo { display:none; }
+      .section-title { font-size:2rem; margin-bottom:1rem; }
+      .img-grid img { height:12rem; }
+    }
+
+    /* FOOTER */
     footer { background:#87CEEB; color:#fff; text-align:center; padding:1.5rem; margin-top:4rem; font-size:1rem; }
   </style>
 </head>
@@ -84,18 +153,19 @@
     </div>
   </header>
 
-    <!-- PROMO BADGE -->
+  <!-- UPDATED PROMO BADGE -->
   <div class="promo">
-    <div class="promo-text">Prices starting at just</div>
-    <div class="star-badge">$99</div>
-    <img src="images/logo.png" alt="Our Logo" class="promo-logo">
+    <div class="star-badge">
+      <span class="star-text">$99</span>
+      <img src="images/logo.png" alt="Our Logo" class="promo-logo">
+    </div>
+    <div class="promo-text-below">Starting at just</div>
   </div>
-
 
   <!-- OPTIONAL VIDEO -->
   <div class="video-wrapper">
     <video id="promoVideo" muted playsinline preload="metadata">
-      <source src="images/promo.mp4" type="video/mp4" />
+      <source src="images/promo.mp4" type="video/mp4"/>
       Your browser doesn’t support embedded videos.
     </video>
   </div>
@@ -155,12 +225,12 @@
   <!-- FOOTER -->
   <footer>&copy; 2025 Pressure Wash FL | All Rights Reserved</footer>
 
-  <!-- Autoplay Script -->
+  <!-- Autoplay Script (if you still want it) -->
   <script>
     document.addEventListener('DOMContentLoaded', () => {
       const vid = document.getElementById('promoVideo');
       setTimeout(() => {
-        vid.play().catch(() => console.warn('Autoplay prevented')); 
+        vid.play().catch(() => console.warn('Autoplay prevented'));
       }, 2000);
     });
   </script>
