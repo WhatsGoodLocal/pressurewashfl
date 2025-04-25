@@ -133,8 +133,18 @@
   .hero-content h1 { font-size:clamp(2rem,8vw,4rem); }
   .hero-content .subtitle { font-size:1.5rem; }
   .hero-content p.call { font-size:1rem; padding:.5rem 1rem; }
-  /* keep the promo visible on phones */
+
+  /* keep it visible */
   /* .promo { display:none; } */
+
+  /* reposition promo down in the corner */
+  .promo {
+    top: auto;       /* cancel the desktop top:35% */
+    bottom: 1rem;    /* 1rem up from bottom */
+    right: 1rem;     /* 1rem in from right */
+    left: auto;      /* cancel any left positioning */
+  }
+
   .section-title { font-size:2rem; margin-bottom:1rem; }
   .img-grid img { height:12rem; }
 }
