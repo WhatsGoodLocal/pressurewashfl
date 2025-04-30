@@ -1,3 +1,4 @@
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -96,7 +97,7 @@
     }
     .promo-logo {
       position: absolute;
-      top: 0; 
+      top: 0;
       left: -27px;    /* ~15% overlap */
       width: 120px;
       height: auto;
@@ -129,17 +130,24 @@
     .img-grid img { width:100%; height:16rem; object-fit:cover; border-radius:.75rem; box-shadow:0 4px 12px rgba(0,0,0,0.15); transition:transform .3s ease; }
     .img-grid img:hover { transform:scale(1.05); }
 
+    /* SECONDARY LOGO */
+    .logo2 {
+      width: 600px;    /* ~5× original */
+      height: auto;
+      max-width: 100%;
+    }
+
     /* MOBILE ADJUSTMENTS */
-    @media(max-width:640px){
+    @media (max-width: 640px) {
       header.hero { height:50vh; }
       .hero-content h1 { font-size:clamp(2rem,8vw,4rem); }
       .hero-content .subtitle { font-size:1.5rem; }
       .hero-content p.call { font-size:1rem; padding:.5rem 1rem; }
 
-      /* reposition & scale badge down */
+      /* reposition promo down & scale star/logo block */
       .promo {
         top: auto;
-        bottom: 3rem;  /* lifted so text shows */
+        bottom: 3rem;
       }
       .badge-container {
         width: 140px;
@@ -151,21 +159,18 @@
       }
       .promo-logo {
         width: 90px;
-        left: -20px;   /* overlap ~15% */
+        left: -20px;
       }
       .promo-text {
         font-size: 0.9rem;
       }
+
+      /* scale secondary logo on phone */
+      .logo2 {
+        width: calc(100vw - 2rem);  /* almost full width */
+        height: auto;
+      }
     }
-/* ensure logo2 stays 5× size even on phones */
-@media (max-width: 640px) {
-  .logo2 {
-    height: 600px;
-    width: auto;
-  }
-}
-
-
 
     /* FOOTER */
     footer { background:#87CEEB; color:#fff; text-align:center; padding:1.5rem; margin-top:4rem; font-size:1rem; }
@@ -253,12 +258,7 @@
 
   <!-- SECONDARY LOGO (5× larger) -->
   <div class="my-8 text-center">
-    <img
-      src="images/logo2.png"
-      alt="Secondary Logo"
-      class="inline-block logo2"
-      style="height: 600px; width: auto; max-width: 100%;"
-    />
+    <img src="images/logo2.png" alt="Secondary Logo" class="inline-block logo2"/>
   </div>
 
   <!-- FOOTER -->
@@ -273,3 +273,6 @@
   </script>
 </body>
 </html>
+``` 
+
+Just copy & paste this entire file over your existing `index.html`. The `.logo2` CSS now fixes it to 600 px wide on desktop and scales proportionally on mobile without squashing.
